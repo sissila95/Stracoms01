@@ -26,8 +26,10 @@
       "package": "com.congobooking.app"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
     },
+    "platforms": ["ios", "android", "web"],
     "description": "Application de réservation d'hôtels et appartements meublés au Congo Brazzaville"
   }
 }
