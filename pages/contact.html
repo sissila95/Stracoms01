@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - CongoMeublé</title>
+    <meta name="description" content="Contactez CongoMeublé pour vos besoins en location d'appartements meublés à Brazzaville et Pointe-Noire.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav__logo">
+                <span class="logo-icon">🏠</span> Congo<span class="text-primary">Meublé</span>
+            </a>
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="../index.html" class="nav__link">Accueil</a></li>
+                <li><a href="appartements.html" class="nav__link">Appartements</a></li>
+                <li><a href="about.html" class="nav__link">À Propos</a></li>
+                <li><a href="contact.html" class="nav__link active">Contact</a></li>
+            </ul>
+            <button class="nav__toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-header__title">Contactez-nous</h1>
+            <p class="page-header__breadcrumb">
+                <a href="../index.html">Accueil</a> / <span>Contact</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2 class="contact-form__title">Envoyez-nous un message</h2>
+                    <p class="contact-form__subtitle">Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lastName">Nom *</label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Votre nom">
+                            </div>
+                            <div class="form-group">
+                                <label for="firstName">Prénom *</label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="Votre prénom">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+242 06 XXX XX XX">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject" name="subject">
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="location">Demande de location</option>
+                                <option value="visite">Planifier une visite</option>
+                                <option value="info">Demande d'information</option>
+                                <option value="proprietaire">Devenir propriétaire partenaire</option>
+                                <option value="reclamation">Réclamation</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cityPreference">Ville d'intérêt</label>
+                            <select id="cityPreference" name="cityPreference">
+                                <option value="">Sélectionnez une ville</option>
+                                <option value="brazzaville">Brazzaville</option>
+                                <option value="pointe-noire">Pointe-Noire</option>
+                                <option value="les-deux">Les deux</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre demande (type de logement recherché, durée, budget, quartier préféré...)"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">Envoyer le message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-info-card">
+                        <h3 class="contact-info-card__title">Nos Coordonnées</h3>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-item__icon">📍</div>
+                            <div>
+                                <h4>Bureau Brazzaville</h4>
+                                <p>Avenue de la Paix, Centre-Ville<br>Brazzaville, République du Congo</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-item__icon">📍</div>
+                            <div>
+                                <h4>Bureau Pointe-Noire</h4>
+                                <p>Avenue Charles de Gaulle<br>Pointe-Noire, République du Congo</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-item__icon">📞</div>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p>+242 06 XXX XX XX (Brazzaville)<br>+242 05 XXX XX XX (Pointe-Noire)</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-item__icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contact@congomeuble.cg</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-item__icon">🕐</div>
+                            <div>
+                                <h4>Horaires</h4>
+                                <p>Lundi - Vendredi : 8h00 - 18h00<br>Samedi : 9h00 - 14h00<br>Dimanche : Fermé</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card contact-info-card--social">
+                        <h3 class="contact-info-card__title">Suivez-nous</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">Facebook</a>
+                            <a href="#" class="social-link" aria-label="WhatsApp">WhatsApp</a>
+                            <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--gray">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Questions Fréquentes</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        <span>Quels documents sont nécessaires pour louer ?</span>
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Pour louer un appartement, vous aurez besoin de : une pièce d'identité (passeport ou carte d'identité), une attestation de travail ou justificatif de revenus, et le versement de la caution (généralement 2 mois de loyer).</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        <span>Quelle est la durée minimale de location ?</span>
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>La durée minimale varie selon les appartements. En général, nous proposons des locations à partir de 1 mois. Certains logements acceptent des séjours plus courts (à partir de 2 semaines) sur demande.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        <span>Les charges sont-elles incluses dans le loyer ?</span>
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Cela dépend des appartements. Certains incluent l'eau et l'électricité dans le loyer, tandis que d'autres les facturent séparément. Les détails sont précisés pour chaque annonce. Le WiFi est généralement inclus.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        <span>Peut-on visiter avant de louer ?</span>
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Oui, nous encourageons les visites avant toute signature. Contactez-nous pour planifier une visite à l'heure qui vous convient. Pour les clients à distance, nous proposons des visites virtuelles par vidéo.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        <span>Comment se fait le paiement ?</span>
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Le paiement peut se faire par virement bancaire, Mobile Money (Airtel Money, MTN Mobile Money) ou en espèces. Le loyer est payable mensuellement, d'avance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__logo">🏠 Congo<span class="text-primary">Meublé</span></h3>
+                    <p class="footer__desc">Votre partenaire de confiance pour la location d'appartements meublés à Brazzaville et Pointe-Noire.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Navigation</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="appartements.html">Appartements</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Villes</h4>
+                    <ul class="footer__links">
+                        <li><a href="appartements.html?city=brazzaville">Brazzaville</a></li>
+                        <li><a href="appartements.html?city=pointe-noire">Pointe-Noire</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__contact">
+                        <li>📍 Avenue de la Paix, Brazzaville</li>
+                        <li>📞 +242 06 XXX XX XX</li>
+                        <li>📧 contact@congomeuble.cg</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 CongoMeublé. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Appartements - CongoMeublé</title>
+    <meta name="description" content="Catalogue complet d'appartements meublés à louer à Brazzaville et Pointe-Noire.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav__logo">
+                <span class="logo-icon">🏠</span> Congo<span class="text-primary">Meublé</span>
+            </a>
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="../index.html" class="nav__link">Accueil</a></li>
+                <li><a href="appartements.html" class="nav__link active">Appartements</a></li>
+                <li><a href="about.html" class="nav__link">À Propos</a></li>
+                <li><a href="contact.html" class="nav__link">Contact</a></li>
+            </ul>
+            <button class="nav__toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-header__title">Nos Appartements</h1>
+            <p class="page-header__breadcrumb">
+                <a href="../index.html">Accueil</a> / <span>Appartements</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Filters & Listings -->
+    <section class="section">
+        <div class="container">
+            <div class="catalog-layout">
+                <!-- Sidebar Filters -->
+                <aside class="filters-sidebar" id="filtersSidebar">
+                    <div class="filters-sidebar__header">
+                        <h3>Filtres</h3>
+                        <button class="filters-sidebar__close" id="filtersClose">✕</button>
+                    </div>
+
+                    <form class="filters-form" id="filtersForm">
+                        <div class="filter-group">
+                            <label class="filter-group__label">Ville</label>
+                            <select name="city" id="filterCity" class="filter-group__select">
+                                <option value="">Toutes les villes</option>
+                                <option value="brazzaville">Brazzaville</option>
+                                <option value="pointe-noire">Pointe-Noire</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label class="filter-group__label">Quartier</label>
+                            <select name="quartier" id="filterQuartier" class="filter-group__select">
+                                <option value="">Tous les quartiers</option>
+                                <optgroup label="Brazzaville">
+                                    <option value="centre-ville-bzv">Centre-Ville</option>
+                                    <option value="bacongo">Bacongo</option>
+                                    <option value="poto-poto">Poto-Poto</option>
+                                    <option value="moungali">Moungali</option>
+                                    <option value="ouenze">Ouenzé</option>
+                                    <option value="talangai">Talangaï</option>
+                                    <option value="mfilou">M'Filou</option>
+                                </optgroup>
+                                <optgroup label="Pointe-Noire">
+                                    <option value="centre-ville-pnr">Centre-Ville</option>
+                                    <option value="loandjili">Loandjili</option>
+                                    <option value="tie-tie">Tié-Tié</option>
+                                    <option value="cote-sauvage">Côte Sauvage</option>
+                                    <option value="ngoyo">Ngoyo</option>
+                                    <option value="mongo-mpoukou">Mongo-Mpoukou</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label class="filter-group__label">Type de logement</label>
+                            <select name="type" id="filterType" class="filter-group__select">
+                                <option value="">Tous les types</option>
+                                <option value="studio">Studio</option>
+                                <option value="t2">T2 (1 chambre)</option>
+                                <option value="t3">T3 (2 chambres)</option>
+                                <option value="t4">T4+ (3+ chambres)</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label class="filter-group__label">Budget maximum / mois</label>
+                            <select name="budget" id="filterBudget" class="filter-group__select">
+                                <option value="">Tous les budgets</option>
+                                <option value="200000">200 000 FCFA</option>
+                                <option value="300000">300 000 FCFA</option>
+                                <option value="500000">500 000 FCFA</option>
+                                <option value="750000">750 000 FCFA</option>
+                                <option value="1000000">1 000 000 FCFA</option>
+                                <option value="1500000">1 500 000+ FCFA</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label class="filter-group__label">Équipements</label>
+                            <div class="filter-group__checkboxes">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="wifi" value="wifi"> WiFi
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="climatisation" value="climatisation"> Climatisation
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="parking" value="parking"> Parking
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="gardien" value="gardien"> Gardien
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="groupe" value="groupe"> Groupe électrogène
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Appliquer les filtres</button>
+                        <button type="reset" class="btn btn-outline btn-block">Réinitialiser</button>
+                    </form>
+                </aside>
+
+                <!-- Listings -->
+                <div class="catalog-main">
+                    <div class="catalog-main__header">
+                        <p class="catalog-main__count"><strong id="resultsCount">12</strong> appartements trouvés</p>
+                        <div class="catalog-main__actions">
+                            <button class="btn btn-outline btn-sm filters-toggle" id="filtersToggle">
+                                Filtres
+                            </button>
+                            <select id="sortBy" class="sort-select">
+                                <option value="recent">Plus récents</option>
+                                <option value="price-asc">Prix croissant</option>
+                                <option value="price-desc">Prix décroissant</option>
+                                <option value="surface-desc">Surface décroissante</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="apartments-grid" id="apartmentsList">
+                        <!-- Card 1 -->
+                        <article class="apartment-card" data-city="brazzaville" data-type="t3" data-price="450000" data-quartier="centre-ville-bzv">
+                            <div class="apartment-card__image">
+                                <div class="apartment-card__placeholder"><span>🏢</span></div>
+                                <span class="apartment-card__badge">Populaire</span>
+                                <span class="apartment-card__city">Brazzaville</span>
+                            </div>
+                            <div class="apartment-card__content">
+                                <h3 class="apartment-card__title">Appartement Moderne Centre-Ville</h3>
+                                <p class="apartment-card__location">📍 Centre-Ville, Brazzaville</p>
+                                <div class="apartment-card__features">
+                                    <span>🛏️ 2 Ch.</span>
+                                    <span>🚿 1 SdB</span>
+                                    <span>📐 75 m²</span>
+                                    <span>❄️ Clim</span>
+                                </div>
+                                <div class="apartment-card__footer">
+                                    <span class="apartment-card__price">450 000 <small>FCFA/mois</small></span>
+                                    <a href="detail.html?id=1" class="btn btn-outline btn-sm">Voir</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="apartment-card" data-city="pointe-noire" data-type="studio" data-price="250000" data-quartier="loandjili">
+                            <div class="apartment-card__image">
+                                <div class="apartment-card__placeholder"><span>🏢</span></div>
+                                <span class="apartment-card__badge badge-new">Nouveau</span>
+                                <span class="apartment-card__city">Pointe-Noire</span>
+                            </div>
+                            <div class="apartment-card__content">
+                                <h3 class="apartment-card__title">Studio Meublé Loandjili</h3>
+                                <p class="apartment-card__location">📍 Loandjili, Pointe-Noire</p>
+                                <div class="apartment-card__features">
+                                    <span>🛏️ Studio</span>
+                                    <span>🚿 1 SdB</span>
+                                    <span>📐 35 m²</span>
+                                </div>
+                                <div class="apartment-card__footer">
+                                    <span class="apartment-card__price">250 000 <small>FCFA/mois</small></span>
+                                    <a href="detail.html?id=2" class="btn btn-outline btn-sm">Voir</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="apartment-card" data-city="brazzaville" data-type="t4" data-price="750000" data-quartier="bacongo">
+                            <div class="apartment-card__image">
+                                <div class="apartment-card__placeholder"><span>🏢</span></div>
+                                <span class="apartment-card__city">Brazzaville</span>
+                            </div>
+                            <div class="apartment-card__content">
+                                <h3 class="apartment-card__title">T3 Standing Bacongo</h3>
+                                <p class="apartment-card__location">📍 Bacongo, Brazzaville</p>
+                                <div class="apartment-card__features">
+                                    <span>🛏️ 3 Ch.</span>
+                                    <span>🚿 2 SdB</span>
+                                    <span>📐 110 m²</span>
+                                    <span>🅿️ Parking</span>
+                                </div>
+                                <div class="apartment-card__footer">
+                                    <span class="apartment-card__price">750 000 <small>FCFA/mois</small></span>
+                                    <a href="detail.html?id=3" class="btn btn-outline btn-sm">Voir</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="apartment-card" data-city="pointe-noire" data-type="t3" data-price="600000" data-quartier="cote-sauvage">
+                            <div class="apartment-card__image">
+                                <div class="apartment-card__placeholder"><span>🏢</span></div>
+                                <span class="apartment-card__badge badge-promo">Promo</span>
+                                <span class="apartment-card__city">Pointe-Noire</span>
+                            </div>
+                            <div class="apartment-card__content">
+                                <h3 class="apartment-card__title">Appartement Vue Mer Côte Sauvage</h3>
+                                <p class="apartment-card__location">📍 Côte Sauvage, Pointe-Noire</p>
+                                <div class="apartment-card__features">
+                                    <span>🛏️ 2 Ch.</span>
+                                    <span>🚿 2 SdB</span>
+                                    <span>📐 90 m²</span>
+                                    <span>❄️ Clim</span>
+                                </div>
+                                <div class="apartment-card__footer">
+                                    <span class="apartment-card__price">600 000 <small>FCFA/mois</small></span>
+                                    <a href="detail.html?id=4" class="btn btn-outline btn-sm">Voir</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 5 -->
+                        <article class="apartment-card" data-city="brazzaville" data-type="t2" data-price="350000" data-quartier="poto-poto">
+                            <div class="apartment-card__image">
+                                <div class="apartment-card__placeholder"><span>🏢</span></div>
+                                <span class="apartment-card__city">Brazzaville</span>
+                            </div>
+                            <div class="apartment-card__content">
+                                <h3 class="apartment-card__title">T2 Meublé Poto-Poto</h3>
+                                <p class="apartment-card__location">📍 Poto-Poto, Brazzaville</p>
+                                <div class="apartment-card__features">
+                                    <span>🛏️ 1 Ch.</span>
+                                    <span>🚿 1 SdB</span>
+                                    <span>📐 55 m²</span>
+                                    <span>📶 WiFi</span>
+                                </div>
+                                <div class="apartment-card__footer">
+                                    <span class="apartment-card__price">350 000 <small>FCFA/mois</small></span>
+                                    <a href="detail.html?id=5" class="btn btn-outline btn-sm">Voir</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 6 -->
+                        <article class="apartment-card" data-city="pointe-noire" data-type="t4" data-price="1200000" data-quartier="centre-ville-pnr">
+                            <div class="apartment-card__image">
+                                <div class="apartment-card__placeholder"><span>🏢</span></div>
+                                <span class="apartment-card__badge badge-new">Nouveau</span>
+                                <span class="apartment-card__city">Pointe-Noire</span>
+                            </div>
+                            <div class="apartment-card__content">
+                                <h3 class="apartment-card__title">Grand T4 Résidence Les Palmiers</h3>
+                                <p class="apartment-card__location">📍 Centre-Ville, Pointe-Noire</p>
+                                <div class="apartment-card__features">
+                                    <span>🛏️ 4 Ch.</span>
+                                    <span>🚿 3 SdB</span>
+                                    <span>📐 150 m²</span>
+                                    <span>🅿️ Parking</span>
+                                </div>
+                                <div class="apartment-card__footer">
+                                    <span class="apartment-card__price">1 200 000 <small>FCFA/mois</small></span>
+                                    <a href="detail.html?id=6" class="btn btn-outline btn-sm">Voir</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 7 -->
+                        <article class="apartment-card" data-city="brazzaville" data-type="studio" data-price="180000" data-quartier="moungali">
+                            <div class="apartment-card__image">
+                                <div class="apartment-card__placeholder"><span>🏢</span></div>
+                                <span class="apartment-card__city">Brazzaville</span>
+                            </div>
+                            <div class="apartment-card__content">
+                                <h3 class="apartment-card__title">Studio Économique Moungali</h3>
+                                <p class="apartment-card__location">📍 Moungali, Brazzaville</p>
+                                <div class="apartment-card__features">
+                                    <span>🛏️ Studio</span>
+                                    <span>🚿 1 SdB</span>
+                                    <span>📐 28 m²</span>
+                                </div>
+                                <div class="apartment-card__footer">
+                                    <span class="apartment-card__price">180 000 <small>FCFA/mois</small></span>
+                                    <a href="detail.html?id=7" class="btn btn-outline btn-sm">Voir</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 8 -->
+                        <article class="apartment-card" data-city="pointe-noire" data-type="t2" data-price="400000" data-quartier="ngoyo">
+                            <div class="apartment-card__image">
+                                <div class="apartment-card__placeholder"><span>🏢</span></div>
+                                <span class="apartment-card__city">Pointe-Noire</span>
+                            </div>
+                            <div class="apartment-card__content">
+                                <h3 class="apartment-card__title">T2 Confort Ngoyo</h3>
+                                <p class="apartment-card__location">📍 Ngoyo, Pointe-Noire</p>
+                                <div class="apartment-card__features">
+                                    <span>🛏️ 1 Ch.</span>
+                                    <span>🚿 1 SdB</span>
+                                    <span>📐 60 m²</span>
+                                    <span>❄️ Clim</span>
+                                </div>
+                                <div class="apartment-card__footer">
+                                    <span class="apartment-card__price">400 000 <small>FCFA/mois</small></span>
+                                    <a href="detail.html?id=8" class="btn btn-outline btn-sm">Voir</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 9 -->
+                        <article class="apartment-card" data-city="brazzaville" data-type="t3" data-price="550000" data-quartier="ouenze">
+                            <div class="apartment-card__image">
+                                <div class="apartment-card__placeholder"><span>🏢</span></div>
+                                <span class="apartment-card__city">Brazzaville</span>
+                            </div>
+                            <div class="apartment-card__content">
+                                <h3 class="apartment-card__title">T3 Rénové Ouenzé</h3>
+                                <p class="apartment-card__location">📍 Ouenzé, Brazzaville</p>
+                                <div class="apartment-card__features">
+                                    <span>🛏️ 2 Ch.</span>
+                                    <span>🚿 1 SdB</span>
+                                    <span>📐 80 m²</span>
+                                    <span>🔒 Gardien</span>
+                                </div>
+                                <div class="apartment-card__footer">
+                                    <span class="apartment-card__price">550 000 <small>FCFA/mois</small></span>
+                                    <a href="detail.html?id=9" class="btn btn-outline btn-sm">Voir</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 10 -->
+                        <article class="apartment-card" data-city="pointe-noire" data-type="t3" data-price="500000" data-quartier="tie-tie">
+                            <div class="apartment-card__image">
+                                <div class="apartment-card__placeholder"><span>🏢</span></div>
+                                <span class="apartment-card__city">Pointe-Noire</span>
+                            </div>
+                            <div class="apartment-card__content">
+                                <h3 class="apartment-card__title">T3 Familial Tié-Tié</h3>
+                                <p class="apartment-card__location">📍 Tié-Tié, Pointe-Noire</p>
+                                <div class="apartment-card__features">
+                                    <span>🛏️ 2 Ch.</span>
+                                    <span>🚿 1 SdB</span>
+                                    <span>📐 85 m²</span>
+                                    <span>📶 WiFi</span>
+                                </div>
+                                <div class="apartment-card__footer">
+                                    <span class="apartment-card__price">500 000 <small>FCFA/mois</small></span>
+                                    <a href="detail.html?id=10" class="btn btn-outline btn-sm">Voir</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 11 -->
+                        <article class="apartment-card" data-city="brazzaville" data-type="t4" data-price="900000" data-quartier="centre-ville-bzv">
+                            <div class="apartment-card__image">
+                                <div class="apartment-card__placeholder"><span>🏢</span></div>
+                                <span class="apartment-card__badge">Populaire</span>
+                                <span class="apartment-card__city">Brazzaville</span>
+                            </div>
+                            <div class="apartment-card__content">
+                                <h3 class="apartment-card__title">Penthouse Luxe Centre-Ville</h3>
+                                <p class="apartment-card__location">📍 Centre-Ville, Brazzaville</p>
+                                <div class="apartment-card__features">
+                                    <span>🛏️ 3 Ch.</span>
+                                    <span>🚿 2 SdB</span>
+                                    <span>📐 130 m²</span>
+                                    <span>⚡ Groupe</span>
+                                </div>
+                                <div class="apartment-card__footer">
+                                    <span class="apartment-card__price">900 000 <small>FCFA/mois</small></span>
+                                    <a href="detail.html?id=11" class="btn btn-outline btn-sm">Voir</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 12 -->
+                        <article class="apartment-card" data-city="pointe-noire" data-type="studio" data-price="200000" data-quartier="mongo-mpoukou">
+                            <div class="apartment-card__image">
+                                <div class="apartment-card__placeholder"><span>🏢</span></div>
+                                <span class="apartment-card__city">Pointe-Noire</span>
+                            </div>
+                            <div class="apartment-card__content">
+                                <h3 class="apartment-card__title">Studio Neuf Mongo-Mpoukou</h3>
+                                <p class="apartment-card__location">📍 Mongo-Mpoukou, Pointe-Noire</p>
+                                <div class="apartment-card__features">
+                                    <span>🛏️ Studio</span>
+                                    <span>🚿 1 SdB</span>
+                                    <span>📐 32 m²</span>
+                                </div>
+                                <div class="apartment-card__footer">
+                                    <span class="apartment-card__price">200 000 <small>FCFA/mois</small></span>
+                                    <a href="detail.html?id=12" class="btn btn-outline btn-sm">Voir</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__logo">🏠 Congo<span class="text-primary">Meublé</span></h3>
+                    <p class="footer__desc">Votre partenaire de confiance pour la location d'appartements meublés à Brazzaville et Pointe-Noire.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Navigation</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="appartements.html">Appartements</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Villes</h4>
+                    <ul class="footer__links">
+                        <li><a href="appartements.html?city=brazzaville">Brazzaville</a></li>
+                        <li><a href="appartements.html?city=pointe-noire">Pointe-Noire</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__contact">
+                        <li>📍 Avenue de la Paix, Brazzaville</li>
+                        <li>📞 +242 06 XXX XX XX</li>
+                        <li>📧 contact@congomeuble.cg</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 CongoMeublé. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

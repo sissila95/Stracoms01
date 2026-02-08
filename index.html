@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CongoMeublé - Location d'Appartements Meublés à Brazzaville & Pointe-Noire</title>
+    <meta name="description" content="Trouvez votre appartement meublé idéal à Brazzaville et Pointe-Noire. Location courte et longue durée au Congo.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <span class="logo-icon">🏠</span> Congo<span class="text-primary">Meublé</span>
+            </a>
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="index.html" class="nav__link active">Accueil</a></li>
+                <li><a href="pages/appartements.html" class="nav__link">Appartements</a></li>
+                <li><a href="pages/about.html" class="nav__link">À Propos</a></li>
+                <li><a href="pages/contact.html" class="nav__link">Contact</a></li>
+            </ul>
+            <button class="nav__toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__overlay"></div>
+        <div class="hero__content container">
+            <h1 class="hero__title">Trouvez votre appartement meublé au Congo</h1>
+            <p class="hero__subtitle">Des logements confortables et modernes à Brazzaville et Pointe-Noire, pour des séjours courts ou longs.</p>
+
+            <!-- Search Form -->
+            <div class="search-box">
+                <form class="search-form" id="searchForm">
+                    <div class="search-form__group">
+                        <label for="city">Ville</label>
+                        <select id="city" name="city">
+                            <option value="">Toutes les villes</option>
+                            <option value="brazzaville">Brazzaville</option>
+                            <option value="pointe-noire">Pointe-Noire</option>
+                        </select>
+                    </div>
+                    <div class="search-form__group">
+                        <label for="type">Type</label>
+                        <select id="type" name="type">
+                            <option value="">Tous les types</option>
+                            <option value="studio">Studio</option>
+                            <option value="t2">T2 (1 chambre)</option>
+                            <option value="t3">T3 (2 chambres)</option>
+                            <option value="t4">T4+ (3+ chambres)</option>
+                        </select>
+                    </div>
+                    <div class="search-form__group">
+                        <label for="budget">Budget max / mois</label>
+                        <select id="budget" name="budget">
+                            <option value="">Tous les budgets</option>
+                            <option value="300000">300 000 FCFA</option>
+                            <option value="500000">500 000 FCFA</option>
+                            <option value="750000">750 000 FCFA</option>
+                            <option value="1000000">1 000 000 FCFA</option>
+                            <option value="1500000">1 500 000+ FCFA</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary search-form__btn">
+                        Rechercher
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container stats__grid">
+            <div class="stat-item">
+                <span class="stat-item__number" data-count="150">0</span>
+                <span class="stat-item__label">Appartements</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-item__number" data-count="2">0</span>
+                <span class="stat-item__label">Villes</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-item__number" data-count="500">0</span>
+                <span class="stat-item__label">Clients satisfaits</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-item__number" data-count="5">0</span>
+                <span class="stat-item__label">Ans d'expérience</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Apartments -->
+    <section class="section" id="featured">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Appartements en Vedette</h2>
+                <p class="section__subtitle">Découvrez nos meilleures offres à Brazzaville et Pointe-Noire</p>
+            </div>
+
+            <div class="apartments-grid" id="featuredApartments">
+                <!-- Apartment Card 1 -->
+                <article class="apartment-card">
+                    <div class="apartment-card__image">
+                        <div class="apartment-card__placeholder">
+                            <span>🏢</span>
+                        </div>
+                        <span class="apartment-card__badge">Populaire</span>
+                        <span class="apartment-card__city">Brazzaville</span>
+                    </div>
+                    <div class="apartment-card__content">
+                        <h3 class="apartment-card__title">Appartement Moderne Centre-Ville</h3>
+                        <p class="apartment-card__location">📍 Centre-Ville, Brazzaville</p>
+                        <div class="apartment-card__features">
+                            <span>🛏️ 2 Chambres</span>
+                            <span>🚿 1 Salle de bain</span>
+                            <span>📐 75 m²</span>
+                        </div>
+                        <div class="apartment-card__footer">
+                            <span class="apartment-card__price">450 000 <small>FCFA/mois</small></span>
+                            <a href="pages/detail.html?id=1" class="btn btn-outline btn-sm">Voir plus</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Apartment Card 2 -->
+                <article class="apartment-card">
+                    <div class="apartment-card__image">
+                        <div class="apartment-card__placeholder">
+                            <span>🏢</span>
+                        </div>
+                        <span class="apartment-card__badge badge-new">Nouveau</span>
+                        <span class="apartment-card__city">Pointe-Noire</span>
+                    </div>
+                    <div class="apartment-card__content">
+                        <h3 class="apartment-card__title">Studio Meublé Quartier Loandjili</h3>
+                        <p class="apartment-card__location">📍 Loandjili, Pointe-Noire</p>
+                        <div class="apartment-card__features">
+                            <span>🛏️ Studio</span>
+                            <span>🚿 1 Salle de bain</span>
+                            <span>📐 35 m²</span>
+                        </div>
+                        <div class="apartment-card__footer">
+                            <span class="apartment-card__price">250 000 <small>FCFA/mois</small></span>
+                            <a href="pages/detail.html?id=2" class="btn btn-outline btn-sm">Voir plus</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Apartment Card 3 -->
+                <article class="apartment-card">
+                    <div class="apartment-card__image">
+                        <div class="apartment-card__placeholder">
+                            <span>🏢</span>
+                        </div>
+                        <span class="apartment-card__city">Brazzaville</span>
+                    </div>
+                    <div class="apartment-card__content">
+                        <h3 class="apartment-card__title">T3 Standing Bacongo</h3>
+                        <p class="apartment-card__location">📍 Bacongo, Brazzaville</p>
+                        <div class="apartment-card__features">
+                            <span>🛏️ 3 Chambres</span>
+                            <span>🚿 2 Salles de bain</span>
+                            <span>📐 110 m²</span>
+                        </div>
+                        <div class="apartment-card__footer">
+                            <span class="apartment-card__price">750 000 <small>FCFA/mois</small></span>
+                            <a href="pages/detail.html?id=3" class="btn btn-outline btn-sm">Voir plus</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Apartment Card 4 -->
+                <article class="apartment-card">
+                    <div class="apartment-card__image">
+                        <div class="apartment-card__placeholder">
+                            <span>🏢</span>
+                        </div>
+                        <span class="apartment-card__badge badge-promo">Promo</span>
+                        <span class="apartment-card__city">Pointe-Noire</span>
+                    </div>
+                    <div class="apartment-card__content">
+                        <h3 class="apartment-card__title">Appartement Vue Mer Côte Sauvage</h3>
+                        <p class="apartment-card__location">📍 Côte Sauvage, Pointe-Noire</p>
+                        <div class="apartment-card__features">
+                            <span>🛏️ 2 Chambres</span>
+                            <span>🚿 2 Salles de bain</span>
+                            <span>📐 90 m²</span>
+                        </div>
+                        <div class="apartment-card__footer">
+                            <span class="apartment-card__price">600 000 <small>FCFA/mois</small></span>
+                            <a href="pages/detail.html?id=4" class="btn btn-outline btn-sm">Voir plus</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Apartment Card 5 -->
+                <article class="apartment-card">
+                    <div class="apartment-card__image">
+                        <div class="apartment-card__placeholder">
+                            <span>🏢</span>
+                        </div>
+                        <span class="apartment-card__city">Brazzaville</span>
+                    </div>
+                    <div class="apartment-card__content">
+                        <h3 class="apartment-card__title">T2 Meublé Poto-Poto</h3>
+                        <p class="apartment-card__location">📍 Poto-Poto, Brazzaville</p>
+                        <div class="apartment-card__features">
+                            <span>🛏️ 1 Chambre</span>
+                            <span>🚿 1 Salle de bain</span>
+                            <span>📐 55 m²</span>
+                        </div>
+                        <div class="apartment-card__footer">
+                            <span class="apartment-card__price">350 000 <small>FCFA/mois</small></span>
+                            <a href="pages/detail.html?id=5" class="btn btn-outline btn-sm">Voir plus</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Apartment Card 6 -->
+                <article class="apartment-card">
+                    <div class="apartment-card__image">
+                        <div class="apartment-card__placeholder">
+                            <span>🏢</span>
+                        </div>
+                        <span class="apartment-card__badge badge-new">Nouveau</span>
+                        <span class="apartment-card__city">Pointe-Noire</span>
+                    </div>
+                    <div class="apartment-card__content">
+                        <h3 class="apartment-card__title">Grand T4 Résidence Les Palmiers</h3>
+                        <p class="apartment-card__location">📍 Centre-Ville, Pointe-Noire</p>
+                        <div class="apartment-card__features">
+                            <span>🛏️ 4 Chambres</span>
+                            <span>🚿 3 Salles de bain</span>
+                            <span>📐 150 m²</span>
+                        </div>
+                        <div class="apartment-card__footer">
+                            <span class="apartment-card__price">1 200 000 <small>FCFA/mois</small></span>
+                            <a href="pages/detail.html?id=6" class="btn btn-outline btn-sm">Voir plus</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="section__cta">
+                <a href="pages/appartements.html" class="btn btn-primary btn-lg">Voir tous les appartements</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cities Section -->
+    <section class="section section--gray" id="cities">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Nos Villes</h2>
+                <p class="section__subtitle">Explorez nos locations dans les deux plus grandes villes du Congo</p>
+            </div>
+
+            <div class="cities-grid">
+                <a href="pages/appartements.html?city=brazzaville" class="city-card">
+                    <div class="city-card__image city-card__image--bzv">
+                        <div class="city-card__overlay"></div>
+                        <div class="city-card__content">
+                            <h3 class="city-card__title">Brazzaville</h3>
+                            <p class="city-card__count">85 appartements disponibles</p>
+                            <span class="city-card__link">Explorer →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="pages/appartements.html?city=pointe-noire" class="city-card">
+                    <div class="city-card__image city-card__image--pnr">
+                        <div class="city-card__overlay"></div>
+                        <div class="city-card__content">
+                            <h3 class="city-card__title">Pointe-Noire</h3>
+                            <p class="city-card__count">65 appartements disponibles</p>
+                            <span class="city-card__link">Explorer →</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section" id="howItWorks">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Comment ça marche ?</h2>
+                <p class="section__subtitle">Louez votre appartement meublé en 3 étapes simples</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-card__icon">🔍</div>
+                    <div class="step-card__number">1</div>
+                    <h3 class="step-card__title">Recherchez</h3>
+                    <p class="step-card__text">Parcourez notre catalogue d'appartements meublés et utilisez les filtres pour trouver le logement idéal.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-card__icon">📞</div>
+                    <div class="step-card__number">2</div>
+                    <h3 class="step-card__title">Contactez-nous</h3>
+                    <p class="step-card__text">Appelez-nous ou envoyez un message pour planifier une visite et obtenir plus d'informations.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-card__icon">🔑</div>
+                    <div class="step-card__number">3</div>
+                    <h3 class="step-card__title">Emménagez</h3>
+                    <p class="step-card__text">Signez le contrat, récupérez les clés et installez-vous dans votre nouveau chez-vous.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section--gray" id="testimonials">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Témoignages</h2>
+                <p class="section__subtitle">Ce que disent nos locataires</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text">"Excellent service ! J'ai trouvé un appartement à Brazzaville en moins d'une semaine. Le logement était exactement comme décrit, propre et bien meublé."</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">JM</div>
+                        <div>
+                            <strong>Jean-Marie K.</strong>
+                            <span>Locataire à Brazzaville</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text">"En mission à Pointe-Noire pour 6 mois, CongoMeublé m'a proposé un appartement parfait. Rapport qualité-prix imbattable."</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">SF</div>
+                        <div>
+                            <strong>Sophie F.</strong>
+                            <span>Locataire à Pointe-Noire</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★☆</div>
+                    <p class="testimonial-card__text">"Très professionnel et réactif. L'équipe est disponible et à l'écoute. Je recommande vivement pour toute location meublée au Congo."</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">PA</div>
+                        <div>
+                            <strong>Patrick A.</strong>
+                            <span>Locataire à Brazzaville</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-section__title">Prêt à trouver votre appartement ?</h2>
+            <p class="cta-section__text">Contactez-nous dès maintenant pour découvrir nos offres et réserver votre logement meublé.</p>
+            <div class="cta-section__buttons">
+                <a href="pages/appartements.html" class="btn btn-white btn-lg">Voir les appartements</a>
+                <a href="pages/contact.html" class="btn btn-outline-white btn-lg">Nous contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__logo">🏠 Congo<span class="text-primary">Meublé</span></h3>
+                    <p class="footer__desc">Votre partenaire de confiance pour la location d'appartements meublés à Brazzaville et Pointe-Noire.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Navigation</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="pages/appartements.html">Appartements</a></li>
+                        <li><a href="pages/about.html">À Propos</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Villes</h4>
+                    <ul class="footer__links">
+                        <li><a href="pages/appartements.html?city=brazzaville">Brazzaville</a></li>
+                        <li><a href="pages/appartements.html?city=pointe-noire">Pointe-Noire</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__contact">
+                        <li>📍 Avenue de la Paix, Brazzaville</li>
+                        <li>📞 +242 06 XXX XX XX</li>
+                        <li>📧 contact@congomeuble.cg</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 CongoMeublé. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

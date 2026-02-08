@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail Appartement - CongoMeublé</title>
+    <meta name="description" content="Détail de l'appartement meublé à louer.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav__logo">
+                <span class="logo-icon">🏠</span> Congo<span class="text-primary">Meublé</span>
+            </a>
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="../index.html" class="nav__link">Accueil</a></li>
+                <li><a href="appartements.html" class="nav__link active">Appartements</a></li>
+                <li><a href="about.html" class="nav__link">À Propos</a></li>
+                <li><a href="contact.html" class="nav__link">Contact</a></li>
+            </ul>
+            <button class="nav__toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header page-header--sm">
+        <div class="container">
+            <p class="page-header__breadcrumb">
+                <a href="../index.html">Accueil</a> / <a href="appartements.html">Appartements</a> / <span id="breadcrumbTitle">Détail</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Apartment Detail -->
+    <section class="section">
+        <div class="container">
+            <div class="detail-layout">
+                <!-- Main Content -->
+                <div class="detail-main">
+                    <!-- Image Gallery -->
+                    <div class="detail-gallery">
+                        <div class="detail-gallery__main">
+                            <div class="apartment-card__placeholder apartment-card__placeholder--large">
+                                <span>🏢</span>
+                                <p>Photo principale</p>
+                            </div>
+                        </div>
+                        <div class="detail-gallery__thumbs">
+                            <div class="detail-gallery__thumb active">
+                                <div class="apartment-card__placeholder apartment-card__placeholder--thumb">
+                                    <span>🛋️</span>
+                                </div>
+                            </div>
+                            <div class="detail-gallery__thumb">
+                                <div class="apartment-card__placeholder apartment-card__placeholder--thumb">
+                                    <span>🛏️</span>
+                                </div>
+                            </div>
+                            <div class="detail-gallery__thumb">
+                                <div class="apartment-card__placeholder apartment-card__placeholder--thumb">
+                                    <span>🍳</span>
+                                </div>
+                            </div>
+                            <div class="detail-gallery__thumb">
+                                <div class="apartment-card__placeholder apartment-card__placeholder--thumb">
+                                    <span>🚿</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="detail-section">
+                        <h1 class="detail-section__title" id="apartmentTitle">Appartement Moderne Centre-Ville</h1>
+                        <p class="detail-section__location">📍 Centre-Ville, Brazzaville</p>
+
+                        <div class="detail-features">
+                            <div class="detail-feature">
+                                <span class="detail-feature__icon">🛏️</span>
+                                <span class="detail-feature__text">2 Chambres</span>
+                            </div>
+                            <div class="detail-feature">
+                                <span class="detail-feature__icon">🚿</span>
+                                <span class="detail-feature__text">1 Salle de bain</span>
+                            </div>
+                            <div class="detail-feature">
+                                <span class="detail-feature__icon">📐</span>
+                                <span class="detail-feature__text">75 m²</span>
+                            </div>
+                            <div class="detail-feature">
+                                <span class="detail-feature__icon">🏢</span>
+                                <span class="detail-feature__text">3ème étage</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2 class="detail-section__heading">Description</h2>
+                        <p>Magnifique appartement meublé de 2 chambres situé en plein centre-ville de Brazzaville. Ce logement offre un cadre de vie moderne et confortable, idéal pour les professionnels en mission ou les familles.</p>
+                        <p>L'appartement est entièrement meublé et équipé : cuisine aménagée avec réfrigérateur et cuisinière, salon avec canapé et télévision, chambres avec lits et armoires. La climatisation est installée dans toutes les pièces.</p>
+                        <p>Situé dans un immeuble sécurisé avec gardien 24h/24, parking disponible. Proximité immédiate des commerces, restaurants et transports.</p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2 class="detail-section__heading">Équipements</h2>
+                        <div class="amenities-grid">
+                            <div class="amenity-item">❄️ Climatisation</div>
+                            <div class="amenity-item">📶 WiFi</div>
+                            <div class="amenity-item">📺 Télévision</div>
+                            <div class="amenity-item">🍳 Cuisine équipée</div>
+                            <div class="amenity-item">🧊 Réfrigérateur</div>
+                            <div class="amenity-item">👔 Machine à laver</div>
+                            <div class="amenity-item">🅿️ Parking</div>
+                            <div class="amenity-item">🔒 Gardien 24h/24</div>
+                            <div class="amenity-item">⚡ Groupe électrogène</div>
+                            <div class="amenity-item">💧 Réserve d'eau</div>
+                            <div class="amenity-item">🛋️ Salon meublé</div>
+                            <div class="amenity-item">🪟 Balcon</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2 class="detail-section__heading">Localisation</h2>
+                        <div class="detail-map">
+                            <div class="detail-map__placeholder">
+                                <span>🗺️</span>
+                                <p>Centre-Ville, Brazzaville, République du Congo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="detail-sidebar">
+                    <div class="detail-price-card">
+                        <div class="detail-price-card__price">
+                            <span class="detail-price-card__amount">450 000</span>
+                            <span class="detail-price-card__period">FCFA / mois</span>
+                        </div>
+                        <div class="detail-price-card__details">
+                            <div class="detail-price-card__row">
+                                <span>Caution</span>
+                                <span>2 mois</span>
+                            </div>
+                            <div class="detail-price-card__row">
+                                <span>Durée minimum</span>
+                                <span>1 mois</span>
+                            </div>
+                            <div class="detail-price-card__row">
+                                <span>Disponibilité</span>
+                                <span class="text-success">Disponible</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary btn-block btn-lg">Réserver maintenant</a>
+                        <a href="tel:+24206XXXXXXX" class="btn btn-outline btn-block">📞 Appeler</a>
+                    </div>
+
+                    <div class="detail-agent-card">
+                        <h3 class="detail-agent-card__title">Votre contact</h3>
+                        <div class="detail-agent-card__info">
+                            <div class="detail-agent-card__avatar">CM</div>
+                            <div>
+                                <strong>CongoMeublé</strong>
+                                <p>Agent immobilier</p>
+                            </div>
+                        </div>
+                        <ul class="detail-agent-card__contacts">
+                            <li>📞 +242 06 XXX XX XX</li>
+                            <li>📧 contact@congomeuble.cg</li>
+                            <li>💬 WhatsApp disponible</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline btn-block">Envoyer un message</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Similar Apartments -->
+    <section class="section section--gray">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Appartements Similaires</h2>
+            </div>
+            <div class="apartments-grid apartments-grid--3">
+                <article class="apartment-card">
+                    <div class="apartment-card__image">
+                        <div class="apartment-card__placeholder"><span>🏢</span></div>
+                        <span class="apartment-card__city">Brazzaville</span>
+                    </div>
+                    <div class="apartment-card__content">
+                        <h3 class="apartment-card__title">T2 Meublé Poto-Poto</h3>
+                        <p class="apartment-card__location">📍 Poto-Poto, Brazzaville</p>
+                        <div class="apartment-card__features">
+                            <span>🛏️ 1 Ch.</span>
+                            <span>🚿 1 SdB</span>
+                            <span>📐 55 m²</span>
+                        </div>
+                        <div class="apartment-card__footer">
+                            <span class="apartment-card__price">350 000 <small>FCFA/mois</small></span>
+                            <a href="detail.html?id=5" class="btn btn-outline btn-sm">Voir</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="apartment-card">
+                    <div class="apartment-card__image">
+                        <div class="apartment-card__placeholder"><span>🏢</span></div>
+                        <span class="apartment-card__city">Brazzaville</span>
+                    </div>
+                    <div class="apartment-card__content">
+                        <h3 class="apartment-card__title">T3 Rénové Ouenzé</h3>
+                        <p class="apartment-card__location">📍 Ouenzé, Brazzaville</p>
+                        <div class="apartment-card__features">
+                            <span>🛏️ 2 Ch.</span>
+                            <span>🚿 1 SdB</span>
+                            <span>📐 80 m²</span>
+                        </div>
+                        <div class="apartment-card__footer">
+                            <span class="apartment-card__price">550 000 <small>FCFA/mois</small></span>
+                            <a href="detail.html?id=9" class="btn btn-outline btn-sm">Voir</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="apartment-card">
+                    <div class="apartment-card__image">
+                        <div class="apartment-card__placeholder"><span>🏢</span></div>
+                        <span class="apartment-card__city">Pointe-Noire</span>
+                    </div>
+                    <div class="apartment-card__content">
+                        <h3 class="apartment-card__title">T2 Confort Ngoyo</h3>
+                        <p class="apartment-card__location">📍 Ngoyo, Pointe-Noire</p>
+                        <div class="apartment-card__features">
+                            <span>🛏️ 1 Ch.</span>
+                            <span>🚿 1 SdB</span>
+                            <span>📐 60 m²</span>
+                        </div>
+                        <div class="apartment-card__footer">
+                            <span class="apartment-card__price">400 000 <small>FCFA/mois</small></span>
+                            <a href="detail.html?id=8" class="btn btn-outline btn-sm">Voir</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__logo">🏠 Congo<span class="text-primary">Meublé</span></h3>
+                    <p class="footer__desc">Votre partenaire de confiance pour la location d'appartements meublés à Brazzaville et Pointe-Noire.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Navigation</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="appartements.html">Appartements</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Villes</h4>
+                    <ul class="footer__links">
+                        <li><a href="appartements.html?city=brazzaville">Brazzaville</a></li>
+                        <li><a href="appartements.html?city=pointe-noire">Pointe-Noire</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__contact">
+                        <li>📍 Avenue de la Paix, Brazzaville</li>
+                        <li>📞 +242 06 XXX XX XX</li>
+                        <li>📧 contact@congomeuble.cg</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 CongoMeublé. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
